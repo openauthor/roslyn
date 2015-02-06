@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <OutputType>Html</OutputType>
+    <DocToolExtensionsPath Condition=" '$(DocToolExtensionsPath)' == '' ">
+    </DocToolExtensionsPath>
+    <AssemblyName>DocProject1</AssemblyName>
+    <Name>DocProject1</Name>
+    <RootNamespace>DocProject1</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="css" />
+    <Folder Include="script" />
+    <Content Include="css\default.css">
+    </Content>
+    <Content Include="script\default.js">
+    </Content>
+    <Content Include="script\jquery-2.1.0.min.js">
+    </Content>
+  </ItemGroup>
+  <Import Project="$(DocToolExtensionsPath)\Targets\Microsoft.DocProject.targets" />
+</Project>
